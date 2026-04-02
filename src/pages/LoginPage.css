@@ -1,0 +1,51 @@
+@reference "../index.css";
+
+.login-container {
+  @apply flex w-[90%] mx-auto mt-10 border-2 border-elevated rounded-2xl;
+}
+.left-side{
+  @apply p-10 w-[50%] flex items-center justify-center;
+}
+.login-form{
+  @apply max-w-[500px] w-full;
+}
+.login-input{
+  @apply w-full p-3 my-4 bg-elevated border-none rounded text-text;
+}
+.form-options{
+  @apply flex items-center justify-between gap-2 flex-wrap;
+}
+.login-button{
+  @apply flex items-center justify-center bg-brand text-text text-lg w-full py-3 mt-6 rounded hover:bg-brand-hover transition;
+}
+.form-divider{
+  @apply flex items-center gap-1.5 my-6;
+}
+.line{
+  @apply flex-1 h-px bg-elevated;
+}
+.google-btn{
+  @apply flex items-center justify-center gap-2 border border-elevated text-text w-full py-3 rounded hover:bg-elevated transition;
+}
+.right-side{
+  @apply w-[50%] overflow-hidden;
+}
+.login-image{
+  @apply min-w-[550px] min-h-[550px] object-cover rounded;
+}
+
+@media (max-width: 850px) {
+  .login-container{
+    @apply flex-col items-center;
+  }
+  .login-form{
+    @apply p-6 w-full;
+  }
+
+  .left-side{
+    @apply w-full max-w-[400px];
+  }
+  .right-side{
+    @apply hidden;
+  }
+}

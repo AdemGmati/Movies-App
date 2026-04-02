@@ -1,7 +1,7 @@
 @reference "../index.css";
 
 .navbar{
-  @apply relative w-[90%] mx-auto mt-4 flex items-center justify-between gap-4 bg-[#0F0F0F] ;
+  @apply relative w-[90%] mx-auto mt-4 flex items-center justify-between gap-4 bg-surface ;
 }
 .brand{
   @apply flex items-center gap-3;
@@ -11,23 +11,23 @@
 }
 /* === Links === */
 .links{
-  @apply flex items-center gap-4 rounded-xl border-3 border-[#1A1A1A] px-4 py-2;
+  @apply flex items-center gap-4 rounded-xl border-3 border-elevated px-4 py-2;
 }
 .link{
-  @apply text-sm text-muted;
+  @apply text-xs lg:text-sm text-muted p-2 rounded;
 }
 .link:hover{
   @apply text-text;
 }
 .link.active{
-  @apply text-text bg-[#1A1A1A] p-2 rounded;
-}
+    @apply text-text bg-elevated;
+  }
 /* === Login === */
 .login{
   @apply flex items-center gap-3;
 }
 .login-btn{
-  @apply flex items-center gap-2 rounded-xl bg-brand px-4 py-2 text-sm text-text;
+  @apply flex items-center gap-2 rounded-lg lg:rounded-xl bg-brand px-2 py-1 lg:px-4 lg:py-2 text-xs lg:text-sm text-text;
 }
 .menu-toggle{
   @apply hidden items-center justify-center rounded-xl border border-[#1A1A1A] p-2 text-text bg-transparent;
@@ -43,8 +43,8 @@
   }
 
   .links{
-    @apply hidden absolute top-full left-0 right-0 z-10 mt-3 flex-col items-start gap-3 rounded-2xl border border-[#1A1A1A] bg-[#0F0F0F] px-4 py-4;
-  }
+      @apply hidden absolute top-full left-0 right-0 z-10 mt-3 flex-col items-start gap-3 rounded-2xl border border-elevated bg-surface px-4 py-4;
+    }
 
   .links.open{
     @apply flex;
