@@ -1,0 +1,56 @@
+@reference "../index.css";
+
+.navbar{
+  @apply relative w-[90%] mx-auto mt-4 flex items-center justify-between gap-4 bg-[#0F0F0F] ;
+}
+.brand{
+  @apply flex items-center gap-3;
+}
+.logo{
+  @apply flex items-center;
+}
+/* === Links === */
+.links{
+  @apply flex items-center gap-4 rounded-xl border-3 border-[#1A1A1A] px-4 py-2;
+}
+.link{
+  @apply text-sm text-muted;
+}
+.link:hover{
+  @apply text-text;
+}
+.link.active{
+  @apply text-text bg-[#1A1A1A] p-2 rounded;
+}
+/* === Login === */
+.login{
+  @apply flex items-center gap-3;
+}
+.login-btn{
+  @apply flex items-center gap-2 rounded-xl bg-brand px-4 py-2 text-sm text-text;
+}
+.menu-toggle{
+  @apply hidden items-center justify-center rounded-xl border border-[#1A1A1A] p-2 text-text bg-transparent;
+}
+
+@media (max-width: 850px) {
+  .navbar{
+    @apply flex-wrap;
+  }
+
+  .menu-toggle{
+    @apply inline-flex;
+  }
+
+  .links{
+    @apply hidden absolute top-full left-0 right-0 z-10 mt-3 flex-col items-start gap-3 rounded-2xl border border-[#1A1A1A] bg-[#0F0F0F] px-4 py-4;
+  }
+
+  .links.open{
+    @apply flex;
+  }
+
+  .login-btn{
+    @apply px-3 py-2 text-xs;
+  }
+}

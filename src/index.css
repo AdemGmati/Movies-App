@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+
+@theme {
+  /* Backgrounds — darkest to lightest */
+  --color-base:    #0D0D0D;   /* page background */
+  --color-surface: #151515;   /* cards, panels */
+  --color-elevated:#262626;   /* inputs, hover surfaces */
+
+  /* Text */
+  --color-text:    #F9F9F9;   /* primary text */
+  --color-muted:   #BFBFBF;   /* secondary / placeholder text */
+
+  /* Brand / accent */
+  --color-brand:       #B01117;   /* buttons, active states */
+  --color-brand-hover: #BB0000;   /* button hover */
+}
+
+@layer base {
+  html, body, #root {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #0D0D0D;
+    color: #F9F9F9;
+    font-family: 'Poppins', sans-serif;
+  }
+}
