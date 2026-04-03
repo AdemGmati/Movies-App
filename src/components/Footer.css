@@ -1,7 +1,7 @@
 @reference "../index.css";
 
 .footer {
-  @apply mt-16 bg-base text-text;
+  @apply mt-16 bg-background text-text;
 }
 
 .footer-container {
@@ -17,7 +17,7 @@
 }
 
 .footer-heading {
-  @apply mb-[18px] text-[14px] font-medium leading-[1.5] tracking-[-0.01em] text-[#FFFFFF];
+  @apply mb-[18px] text-[14px] font-medium leading-[1.5] tracking-[-0.01em] text-text;
 }
 
 .footer-list {
@@ -25,7 +25,7 @@
 }
 
 .footer-link {
-  @apply text-[14px] font-normal leading-[1.5] tracking-[-0.01em] text-[#999999] transition-colors duration-200 hover:text-[#FFFFFF];
+  @apply text-[14px] font-normal leading-[1.5] tracking-[-0.01em] text-muted transition-colors duration-200 hover:text-text;
 }
 
 .footer-social-list {
@@ -33,15 +33,15 @@
 }
 
 .footer-social-link {
-  @apply inline-flex h-[54px] w-[54px] items-center justify-center rounded-[10px] bg-[#1A1A1A] text-[#999999] transition-colors duration-200 hover:text-[#FFFFFF];
+  @apply inline-flex h-10 w-10 items-center justify-center rounded-[10px] bg-elevated text-muted transition-colors duration-200 hover:text-text;
 }
 
 .footer-bottom {
-  @apply mt-[76px] flex flex-col gap-5 border-t border-[#262626] pt-6 md:mt-[78px] md:flex-row md:items-center md:justify-between;
+  @apply mt-[76px] flex flex-col gap-5 border-t border-elevated pt-6 md:mt-[78px] md:flex-row md:items-center md:justify-between;
 }
 
 .footer-copy {
-  @apply text-[14px] font-normal leading-[1.5] tracking-[-0.01em] text-[#999999];
+  @apply text-[14px] font-normal leading-[1.5] tracking-[-0.01em] text-muted;
 }
 
 .footer-legal-list {
@@ -49,7 +49,7 @@
 }
 
 .footer-legal-link {
-  @apply text-[14px] font-normal leading-[1.5] tracking-[-0.01em] text-[#999999] transition-colors duration-200 hover:text-[#FFFFFF];
+  @apply text-[14px] font-normal leading-[1.5] tracking-[-0.01em] text-muted transition-colors duration-200 hover:text-text;
 }
 
 @media (min-width: 640px) {
@@ -59,7 +59,7 @@
 
   .footer-legal-item + .footer-legal-item::before {
     content: "";
-    @apply absolute left-0 top-1/2 h-[21px] w-px -translate-y-1/2 bg-[#262626];
+    @apply absolute left-0 top-1/2 h-[21px] w-px -translate-y-1/2 bg-elevated;
   }
 }
 

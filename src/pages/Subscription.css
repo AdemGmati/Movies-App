@@ -1,0 +1,25 @@
+@reference "../index.css";
+
+.subscription-main {
+    @apply flex flex-col items-center pt-20 pb-20 md:pt-28 md:pb-28 w-full;
+}
+
+.subscription-header {
+    @apply text-center max-w-5xl mx-auto mb-16 px-4 md:px-8;
+}
+
+.subscription-title {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-6 leading-tight;
+}
+
+.subscription-highlight {
+    @apply text-brand;
+}
+
+.subscription-description {
+    @apply text-sm text-muted mx-auto max-w-4xl leading-relaxed;
+}
+
+.subscription-plans-section {
+    @apply w-full;
+}

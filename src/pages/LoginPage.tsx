@@ -14,12 +14,12 @@ const LoginPage: React.FC = () => {
         <div className="left-side">
           <div className="login-form">
             <h2 className='text-3xl font-thin mb-8 font-serif'><span className='text-brand'>Welcome</span> back</h2>
-            <div className="form-group">
+            <div>
               <span className='pl-2 text-muted text-sm'>Email</span><br />
               <input className='login-input' type="email" placeholder="Enter your email" />
             </div>
 
-            <div className="form-group">
+            <div>
               <span className='pl-2 text-muted text-sm'>Password</span><br />
               <input className='login-input' type="password" />
             </div>

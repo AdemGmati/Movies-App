@@ -1,0 +1,45 @@
+@reference "../index.css";
+
+.plans-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full max-w-7xl mx-auto px-4 md:px-8;
+}
+
+.plan-card {
+    @apply flex flex-col bg-surface border border-elevated rounded-xl p-8 lg:p-10;
+}
+
+.plan-title {
+    @apply text-3xl md:text-4xl text-text font-medium font-serif mb-8;
+}
+
+.plan-features {
+    @apply flex flex-col gap-4 mb-10 grow;
+}
+
+.plan-feature-item {
+    @apply flex items-start gap-4 text-sm;
+}
+
+.plan-feature-dot {
+    @apply w-2 h-2 rounded-full bg-brand mt-2 shrink-0;
+}
+
+.plan-feature-text {
+    @apply text-muted leading-relaxed;
+}
+
+.plan-pricing {
+    @apply flex items-baseline gap-1 mb-8 text-text;
+}
+
+.plan-price {
+    @apply text-5xl font-serif font-medium;
+}
+
+.plan-duration {
+    @apply text-base text-muted;
+}
+
+.plan-button {
+    @apply w-full bg-brand hover:bg-brand-hover text-text text-sm font-medium py-3 px-6 rounded-md transition-colors duration-200 mt-auto;
+}

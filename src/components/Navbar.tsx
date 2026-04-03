@@ -6,7 +6,7 @@ import './Navbar.css';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const links = ['Home', 'Genre', 'Movies', 'TV Shows', 'Anime', 'Subscriptions'];
+  const links = ['Home', 'Genre', 'Movies', 'TV Shows', 'Anime', 'Subscription'];
   return (
     <nav className="navbar">
       <div className="brand">
@@ -34,7 +34,10 @@ const Navbar: React.FC = () => {
       </div>
       <div className="login">
         <Search className="mr-1 cursor-pointer" />
-        <button className="login-btn"><User /> Sign in/Sign up</button>
+        <button className="login-btn">
+          <User />
+          <NavLink to="/login">Sign in/Sign up</NavLink>
+        </button>
       </div>
     </nav>
   );

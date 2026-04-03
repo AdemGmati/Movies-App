@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom'
 import { FaTelegram, FaXTwitter } from 'react-icons/fa6';
 import './Footer.css';
 
@@ -34,9 +35,9 @@ const Footer: React.FC = () => {
               <ul className="footer-list">
                 {group.links.map((link) => (
                   <li key={link}>
-                    <a href="/" className="footer-link">
+                    <NavLink to="/contact" className="footer-link">
                       {link}
-                    </a>
+                    </NavLink>
                   </li>
                 ))}
               </ul>
@@ -48,16 +49,16 @@ const Footer: React.FC = () => {
             <h2 className="footer-heading">Connect With Us</h2>
             <div className="footer-social-list">
               {socialLinks.map((link) => (
-                <a
+                <NavLink
                   key={link.label}
-                  href={link.href}
+                  to={link.href}
                   target="_blank"
                   rel="noreferrer"
                   className="footer-social-link"
                   aria-label={link.label}
                 >
                   {link.icon}
-                </a>
+                </NavLink>
               ))}
             </div>
           </section>
@@ -70,9 +71,9 @@ const Footer: React.FC = () => {
             <ul className="footer-legal-list">
               {legalLinks.map((link) => (
                 <li key={link} className="footer-legal-item">
-                  <a href="/" className="footer-legal-link">
+                  <NavLink to="/" className="footer-legal-link">
                     {link}
-                  </a>
+                  </NavLink>
                 </li>
               ))}
             </ul>
