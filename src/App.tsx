@@ -1,16 +1,15 @@
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
+import { Routes, Route } from 'react-router-dom';
 import LoginPage from "./pages/LoginPage"
+import Contact from "./pages/Contact"
 
-function App() {
 
+const App = () => {
   return (
-    <>
-      <Navbar />
-      <LoginPage />
-      <Footer />
-    </>
-  )
-}
+    <Routes>
+      <Route path="login" element={<LoginPage />} />
+      <Route path="contact" element={<Contact />} />
+    </Routes>
+  );
+};
 
 export default App

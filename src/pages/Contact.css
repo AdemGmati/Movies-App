@@ -1,0 +1,100 @@
+@reference "../index.css";
+
+/* Main Layout */
+.contact-page {
+  @apply w-full bg-background text-text py-16 px-4 sm:px-8 flex flex-col items-center;
+}
+
+/* Header Section */
+.contact-header {
+  @apply max-w-4xl text-center mb-12 lg:mb-16;
+}
+
+.contact-heading {
+  @apply text-3xl sm:text-4xl lg:text-5xl font-medium mb-6 tracking-wide font-serif;
+}
+
+.text-red {
+  @apply text-brand;
+}
+
+.contact-subheading {
+  @apply text-muted text-sm leading-relaxed max-w-3xl mx-auto;
+}
+
+/* Container Grid */
+.contact-grid {
+  @apply w-full max-w-[1000px] bg-surface border-2 border-elevated rounded-2xl p-6 sm:p-10 lg:p-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14;
+}
+
+/* Contact Info Column */
+.contact-info {
+  @apply flex flex-col h-full;
+}
+
+.info-heading {
+  @apply text-2xl lg:text-3xl font-medium mb-6 font-serif;
+}
+
+.info-description {
+  @apply text-muted text-sm/6 mb-8 flex flex-col gap-4;
+}
+
+.info-list {
+  @apply flex flex-col gap-6 mb-10;
+}
+
+.info-item {
+  @apply flex items-start gap-4 text-sm text-text whitespace-pre-line;
+}
+
+.icon-wrapper {
+  @apply text-muted mt-0.5 shrink-0;
+}
+
+.contact-icon {
+  @apply w-5 h-5;
+}
+
+.item-text {
+  @apply text-text leading-snug opacity-90;
+}
+
+/* Social Buttons */
+.contact-socials {
+  @apply flex items-center gap-4 mt-auto;
+}
+
+.social-btn {
+  @apply w-10 h-10 flex items-center justify-center bg-elevated border border-elevated rounded-full transition-colors hover:bg-[#2A2A2A] text-text;
+}
+
+.social-icon {
+  @apply w-4 h-4;
+}
+
+/* Contact Form Column */
+.contact-form {
+  @apply flex flex-col gap-5;
+}
+
+.form-group {
+  @apply flex flex-col gap-2;
+}
+
+.form-label {
+  @apply text-sm text-text opacity-90;
+}
+
+.form-input,
+.form-textarea {
+  @apply w-full bg-elevated border border-transparent rounded-lg px-4 py-3 text-sm text-text placeholder-muted focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors;
+}
+
+.form-textarea {
+  @apply resize-none min-h-[140px];
+}
+
+.submit-btn {
+  @apply w-full bg-brand hover:bg-brand-hover text-text font-medium py-3.5 mt-2 rounded-lg transition-colors;
+}
