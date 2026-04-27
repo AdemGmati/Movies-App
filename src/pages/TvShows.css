@@ -1,0 +1,88 @@
+@reference "../index.css";
+
+/* ── Hero Section ─────────────────────────────────────── */
+.container {
+  @apply flex flex-col items-center justify-center text-center py-20 px-4 max-w-4xl mx-auto;
+}
+
+.hero-title {
+  @apply text-4xl sm:text-5xl font-bold mb-4 font-serif;
+}
+
+.hero-highlight {
+  @apply text-brand;
+}
+
+.hero-subtitle {
+  @apply text-muted text-sm max-w-xl mx-auto mb-10 leading-relaxed;
+}
+
+/* ── Search Bar ───────────────────────────────────────── */
+.search-wrapper {
+  @apply flex items-center w-full max-w-2xl bg-elevated rounded-lg overflow-hidden;
+}
+
+.search-input {
+  @apply flex-1 bg-transparent px-5 py-3.5 text-sm text-text placeholder-muted focus:outline-none;
+}
+
+.search-btn {
+  @apply bg-brand hover:bg-brand-hover transition-colors px-5 py-3.5 flex items-center justify-center text-text shrink-0;
+}
+
+.search-icon {
+  @apply w-5 h-5;
+}
+
+/* ── Movie Grid Section ───────────────────────────────── */
+.movies-section {
+  @apply w-full px-6 pb-16;
+}
+
+.movies-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto;
+}
+
+/* ── Movie Card ───────────────────────────────────────── */
+.movie-card {
+  @apply bg-surface rounded-xl overflow-hidden flex flex-col cursor-pointer
+         border border-elevated hover:border-brand transition-colors duration-200;
+}
+
+/* ── Card Poster ──────────────────────────────────────── */
+.card-poster-wrapper {
+  @apply relative w-full aspect-[2/3] overflow-hidden;
+}
+
+.card-poster {
+  @apply w-full h-full object-cover;
+}
+
+.genre-badge {
+  @apply absolute top-2 right-2 bg-black/60 text-text text-xs px-2 py-0.5 rounded;
+}
+
+/* ── Card Info ────────────────────────────────────────── */
+.card-info {
+  @apply p-3 flex flex-col gap-1;
+}
+
+.card-title-row {
+  @apply flex items-start justify-between gap-2;
+}
+
+.card-title {
+  @apply text-sm font-semibold text-text leading-snug line-clamp-1;
+}
+
+.rating-badge {
+  @apply text-xs font-bold text-white px-1.5 py-0.5 rounded shrink-0;
+}
+
+.card-date {
+  @apply text-xs text-muted;
+}
+
+.card-desc {
+  @apply text-xs text-muted leading-relaxed line-clamp-2 mt-0.5;
+}

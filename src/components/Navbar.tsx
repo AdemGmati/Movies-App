@@ -6,7 +6,7 @@ import './Navbar.css';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const links = ['Home', 'Genre', 'Movies', 'TV Shows', 'Anime', 'Subscription'];
+  const links = ['Home', 'Genre', 'Movies', 'Tv Shows', 'Anime', 'Subscription'];
   return (
     <nav className="navbar">
       <div className="brand">
@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
         {links.map((link) => (
           <NavLink
             key={link}
-            to={`/${link.toLowerCase()}`}
+            to={`${link === 'Tv Shows' ? '/' : `/${link.toLowerCase()}`}`}
             className={({ isActive }) => `link ${isActive ? 'active' : ''}`}
             onClick={() => setIsMenuOpen(false)}
           >
