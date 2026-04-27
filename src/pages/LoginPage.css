@@ -39,7 +39,7 @@
     @apply flex-col items-center;
   }
   .login-form{
-    @apply p-6 w-full;
+    @apply p-2 w-full;
   }
 
   .left-side{
