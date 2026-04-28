@@ -29,41 +29,6 @@ const getRatingColor = (rating: number): string => {
     return '#e05c2a';
 };
 
-const formatDate = (dateStr: string): string => {
-    if (!dateStr) return 'Unknown';
-    const d = new Date(dateStr);
-    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-};
-
-/* ─── Pagination helper ──────────────────────────────── */
-/**
- * Returns the page numbers / ellipsis items to render.
- * Always shows: first 7, then "…", then last 3  (matching the screenshot).
- * When on a page near the end the window shifts.
- */
-const getPageItems = (current: number, total: number): (number | '…')[] => {
-    if (total <= 10) {
-        return Array.from({ length: total }, (_, i) => i + 1);
-    }
-
-    const left: (number | '…')[] = [1, 2, 3, 4, 5, 6, 7];
-    const right: (number | '…')[] = [total - 2, total - 1, total];
-
-    // If current page is in the "right tail" area, show a continuous block
-    if (current >= total - 4) {
-        const merged = Array.from(new Set([...left, current - 1, current, current + 1, ...right].filter(n => Number(n) >= 1 && Number(n) <= total)));
-        const result: (number | '…')[] = [];
-        merged.sort((a, b) => Number(a) - Number(b)).forEach((n, i, arr) => {
-            if (i > 0 && Number(n) - Number(arr[i - 1]) > 1) result.push('…');
-            result.push(n);
-        });
-        return result;
-    }
-
-    return [...left, '…', ...right];
-};
-
-/* ─── Component ──────────────────────────────────────── */
 const TvShows: React.FC = () => {
     const [shows, setShows] = useState<TvShow[]>([]);
     const [filtered, setFiltered] = useState<TvShow[]>([]);
