@@ -4,7 +4,7 @@
   @apply flex w-[90%] mx-auto mt-10 border-2 border-elevated rounded-2xl;
 }
 .left-side{
-  @apply p-10 w-[50%] flex items-center justify-center;
+  @apply p-4 sm:p-10 w-[50%] flex items-center justify-center;
 }
 .login-form{
   @apply max-w-[500px] w-full;

@@ -86,3 +86,38 @@
 .card-desc {
   @apply text-xs text-muted leading-relaxed line-clamp-2 mt-0.5;
 }
+
+/* ── State messages ───────────────────────────────────── */
+.state-msg {
+  @apply text-center text-muted py-12 text-sm;
+}
+
+.state-error {
+  @apply text-[#e05c2a];
+}
+
+/* ── Pagination ───────────────────────────────────────── */
+.pagination-bar {
+  @apply w-full mt-12 py-3 px-4 flex items-center justify-center gap-1 flex-wrap;
+}
+
+.page-btn {
+  @apply min-w-8 h-8 px-[0.4rem] py-0
+         bg-transparent border-0 rounded
+         text-[#d1d5db] text-[0.85rem] font-medium
+         cursor-pointer transition-colors duration-150
+         flex items-center justify-center;
+}
+
+.page-btn:hover {
+  @apply text-white;
+}
+
+.page-btn--active {
+  @apply bg-[#e50914] !text-white rounded;
+}
+
+.page-ellipsis {
+  @apply min-w-8 h-8 flex items-center justify-center
+         text-gray-500 text-[0.85rem] select-none;
+}
