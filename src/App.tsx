@@ -3,6 +3,7 @@ import LoginPage from "./pages/LoginPage"
 import Contact from "./pages/Contact"
 import Subscription from "./pages/Subscription"
 import TvShows from "./pages/TvShows"
+import DetailPage from "./pages/DetailPage"
 
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
       <Route path="contact" element={<Contact />} />
       <Route path="subscription" element={<Subscription />} />
       <Route path="/" element={<TvShows />} />
+      <Route path="/detail" element={<DetailPage />} />
     </Routes>
   );
 };
