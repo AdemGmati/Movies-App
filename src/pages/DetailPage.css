@@ -3,3 +3,11 @@
 .detail-container{
     @apply mx-auto px-4  max-w-[1440px] w-full border-2 border-white py-5;
 }
+
+.play-btn{
+    @apply flex justify-center items-center gap-2 px-3 py-2 rounded-md text-base;
+}
+
+.seemore-btn{
+    @apply bg-brand hover:bg-brand-hover text-white px-8 py-2 rounded-lg font-medium transition-colors;
+}
