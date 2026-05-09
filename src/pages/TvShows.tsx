@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -37,6 +38,7 @@ const TvShows: React.FC = () => {
     const [error, setError] = useState<string | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
+    const navigate = useNavigate();
 
     /* Fetch on page change */
     useEffect(() => {
@@ -155,7 +157,7 @@ const TvShows: React.FC = () => {
                     <section className="movies-section">
                         <div className="movies-grid">
                             {filtered.map((show) => (
-                                <div key={show.id} className="movie-card">
+                                <div key={show.id} className="movie-card" onClick={() => navigate('/detail')}>
                                     {/* Poster */}
                                     <div className="card-poster-wrapper">
                                         <img

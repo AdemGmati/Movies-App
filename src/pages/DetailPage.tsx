@@ -1,4 +1,5 @@
 import { ArrowLeft, Play, Star, MessageSquare, MoreHorizontal, LayoutGrid } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import './DetailPage.css';
@@ -6,6 +7,7 @@ import poster from '../assets/film1.png';
 
 
 function DetailPage() {
+    const navigate = useNavigate();
     return (
         <div>
             <Navbar />
@@ -13,7 +15,8 @@ function DetailPage() {
                 {/* detail container */}
                 <div className="border-2 border-red-500 mb-20">
                     {/* back to home page */}
-                    <div className="text-white flex justify-start items-center gap-2 cursor-pointer mb-25">
+                    <div className="text-white flex justify-start items-center gap-2 cursor-pointer mb-25"
+                        onClick={() => navigate(-1)}>
                         <ArrowLeft size={20} />
                         <span>Back Home</span>
                     </div>
