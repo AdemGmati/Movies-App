@@ -70,7 +70,7 @@ function DetailPage() {
                     {/* comments card */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
                         {[...Array(4)].map((_, i) => (
-                            <div className="bg-elevated p-6 rounded-2xl flex flex-col gap-4">
+                            <div key={`comment-${i}`} className="bg-elevated p-6 rounded-2xl flex flex-col gap-4">
                                 <div className="flex justify-between items-center">
                                     <div className="flex gap-1">
                                         {[...Array(5)].map((_, i) => (
