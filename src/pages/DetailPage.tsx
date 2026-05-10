@@ -20,35 +20,35 @@ function DetailPage() {
                         <ArrowLeft size={20} />
                         <span>Back Home</span>
                     </div>
-                    <div className="flex justify-start items-start gap-4">
-                        <div className="movie-poster">
-                            <img src={poster} />
+                    <div className="flex flex-col md:flex-row justify-start items-start gap-6 md:gap-10">
+                        <div className="movie-poster w-full md:w-auto flex justify-center shrink-0">
+                            <img src={poster} className="object-cover" />
                         </div>
-                        <div className="movie-info">
-                            <div className="flex justify-between items-center">
+                        <div className="movie-info w-full">
+                            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0">
                                 <div>
-                                    <span className="text-4xl font-bold font-serif">The Matrix</span>
-                                    <span className="text-xs font-light ml-2">2016-2023</span>
+                                    <span className="text-2xl sm:text-4xl font-bold font-serif">The Matrix</span>
+                                    <span className="text-xs sm:text-sm font-light ml-2">2016-2023</span>
                                 </div>
-                                <div className="flex items-center gap-1">
-                                    <span className="text-xs">28 Comments</span>
-                                    <Star />
+                                <div className="flex items-center gap-1 self-start sm:self-auto">
+                                    <span className="text-xs sm:text-sm">28 Comments</span>
+                                    <Star size={16} />
                                 </div>
                             </div>
-                            <div className="font-light text-xs flex flex-col justify-start items-start gap-2 my-4">
-                                <p>Genre: Historical drama</p>
-                                <p>Time: 58m</p>
-                                <p>Stars: Claire Foy, Olivia Colman, Matt Smith, Tobias Menzies</p>
-                                <p>Created by: Peter Morgan</p>
-                                <p>Network: Netflix</p>
-                                <p>8.5</p>
-                                <p>After the king's sudden death, Elizabeth's seemingly quiet life is rattled with personal
+                            <div className="font-light text-sm sm:text-base flex flex-col justify-start items-start gap-2 my-4">
+                                <p><span className="font-medium text-gray-400">Genre:</span> Historical drama</p>
+                                <p><span className="font-medium text-gray-400">Time:</span> 58m</p>
+                                <p><span className="font-medium text-gray-400">Stars:</span> Claire Foy, Olivia Colman, Matt Smith, Tobias Menzies</p>
+                                <p><span className="font-medium text-gray-400">Created by:</span> Peter Morgan</p>
+                                <p><span className="font-medium text-gray-400">Network:</span> Netflix</p>
+                                <p className="flex items-center gap-1 font-medium"><Star size={16} className="text-yellow-400 fill-yellow-400"/> 8.5</p>
+                                <p className="mt-2 text-gray-300 leading-relaxed">After the king's sudden death, Elizabeth's seemingly quiet life is rattled with personal
                                     trials and tribulations and the affairs of the state as she succeeds to
                                     the throne of the British monarchy.</p>
                             </div>
-                            <div className="flex justify-start items-center gap-5">
-                                <button className="play-btn bg-brand "><span><Play /></span>Watch Now </button>
-                                <button className="play-btn bg-elevated">+ Wishlist</button>
+                            <div className="flex flex-col sm:flex-row justify-start items-center gap-4 mt-6">
+                                <button className="play-btn bg-brand w-full sm:w-auto"><span><Play size={20} /></span>Watch Now </button>
+                                <button className="play-btn bg-elevated w-full sm:w-auto">+ Wishlist</button>
                             </div>
                         </div>
                     </div>
