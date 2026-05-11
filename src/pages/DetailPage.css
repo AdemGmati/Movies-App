@@ -1,11 +1,15 @@
 @reference "../index.css";
 
 .detail-container {
-    @apply mx-auto px-4 max-w-[1440px] w-full border-2 border-white py-5;
+    @apply mx-auto px-4 max-w-[1440px] w-full pt-6;
+}
+
+.movie-poster {
+    @apply shrink-0 w-full sm:w-56 md:w-64 lg:w-72;
 }
 
 .movie-poster img {
-    @apply shrink-0 w-full h-full min-w-[250px] min-h-[350px] rounded-lg;
+    @apply w-full aspect-[2/3] object-cover rounded-xl;
 }
 
 .play-btn {
