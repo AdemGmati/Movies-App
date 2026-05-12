@@ -4,6 +4,7 @@ import Contact from "./pages/Contact"
 import Subscription from "./pages/Subscription"
 import TvShows from "./pages/TvShows"
 import DetailPage from "./pages/DetailPage"
+import ReviewPage from "./pages/ReviewPage"
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Route path="subscription" element={<Subscription />} />
       <Route path="/" element={<TvShows />} />
       <Route path="tv/:id" element={<DetailPage />} />
+      <Route path="tv/:id/reviews" element={<ReviewPage />} />
     </Routes>
   );
 };
