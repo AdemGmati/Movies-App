@@ -159,9 +159,11 @@ function DetailPage() {
                         })}
                     </div>
                     )}
-                    <div className="flex justify-center mt-8 mb-4">
-                        <button className="seemore-btn">See more</button>
-                    </div>
+                    {reviews.length > 0 ? (
+                        <div className="flex justify-center mt-8 mb-4">
+                            <button className="seemore-btn" onClick={() => navigate(`/tv/${id}/reviews`)}>See more</button>
+                        </div>
+                    ): ''}
                 </div>
 
                 {/* Recommendations */}
