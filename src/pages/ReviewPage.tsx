@@ -71,10 +71,14 @@ function ReviewPage() {
                                     day: 'numeric',
                                 })
                                 : '';
-                            const avatarUrl = review.author_details?.avatar_path
-                                ? review.author_details.avatar_path.startsWith('/')
-                                    ? `https://image.tmdb.org/t/p/w45${review.author_details.avatar_path}`
-                                    : review.author_details.avatar_path
+                            const rawAvatarPath = review.author_details?.avatar_path;
+                            const normalizedAvatarPath = rawAvatarPath?.startsWith('/http')
+                                ? rawAvatarPath.slice(1)
+                                : rawAvatarPath;
+                            const avatarUrl = normalizedAvatarPath
+                                ? normalizedAvatarPath.startsWith('http')
+                                    ? normalizedAvatarPath
+                                    : `https://image.tmdb.org/t/p/w45${normalizedAvatarPath}`
                                 : null;
 
                             return (
