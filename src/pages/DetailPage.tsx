@@ -19,6 +19,10 @@ function DetailPage() {
     const [recommendations, setRecommendations] = useState<any[]>([]);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [id]);
+
+    useEffect(() => {
         if (!id) return;
 
         setLoading(true);
@@ -52,7 +56,7 @@ function DetailPage() {
         <div>
             <Navbar />
             <main className="detail-container">
-                {/* detail container */}
+                
                 <div className="mb-20">
                     {/* back to home page */}
                     <div className="text-white flex justify-start items-center gap-2 cursor-pointer mb-18"
@@ -178,7 +182,10 @@ function DetailPage() {
                             const recRating = rec.vote_average != null ? rec.vote_average.toFixed(1) : '—';
                             const recYear = rec.first_air_date?.slice(0, 4) ?? '';
                             return (
-                            <div key={rec.id} className="bg-elevated p-4 rounded-2xl flex flex-col gap-3">
+                            <div 
+                                key={rec.id} 
+                                onClick={() => navigate(`/tv/${rec.id}`)}
+                                className="bg-elevated p-4 rounded-2xl flex flex-col gap-3">
                                 <div className="relative">
                                     <img src={recPoster} className="w-full h-auto rounded-xl object-cover aspect-[4/5]" alt={rec.name} />
                                     {recGenre && (
